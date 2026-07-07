@@ -110,7 +110,7 @@ export default function Hero() {
           >
             <a
               href="#quote"
-              className="inline-flex items-center justify-center rounded-full bg-sunburst px-8 py-4 font-heading text-lg font-bold text-white transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-deepwater"
+              className="inline-flex items-center justify-center rounded-full bg-sunburst px-8 py-4 font-heading text-lg font-bold text-white transition-transform motion-safe:hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-deepwater"
             >
               Get My Free Quote
             </a>

@@ -44,7 +44,7 @@ export default function Services() {
             const Icon = service.icon;
             return (
               <FadeUp key={service.title} delay={index * 100} className="h-full">
-                <article className="flex h-full flex-col rounded-2xl bg-white p-8 shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-xl">
+                <article className="flex h-full flex-col rounded-2xl bg-white p-8 shadow-sm transition-all duration-200 ease-out hover:shadow-xl motion-safe:hover:-translate-y-1">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-pool/10">
                     <Icon className="h-6 w-6 text-pool" aria-hidden="true" />
                   </div>

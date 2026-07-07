@@ -9,14 +9,14 @@ const QUICK_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-deepwater text-white">
+    <footer className="bg-deepwater pb-20 text-white md:pb-0">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-3">
         {/* Column 1: company */}
         <div>
           <p className="font-heading text-xl font-extrabold">
             Paradise Pools &amp; Pressure Cleaning
           </p>
-          <p className="mt-3 font-body text-sm text-white/80">
+          <p className="mt-3 font-body text-sm text-white/85">
             Weekly pool maintenance, pressure washing, and bin cleaning for South
             Florida homes.
           </p>
@@ -27,7 +27,7 @@ export default function Footer() {
         {/* Column 2: quick links */}
         <div>
           <p className="font-heading font-bold">Quick Links</p>
-          <ul className="mt-3 space-y-2 font-body text-sm text-white/80">
+          <ul className="mt-3 space-y-2 font-body text-sm text-white/85">
             {QUICK_LINKS.map((link) => (
               <li key={link.href}>
                 <a href={link.href} className="transition-colors hover:text-aqua">
@@ -42,7 +42,7 @@ export default function Footer() {
         <div>
           <p className="font-heading font-bold">Service Area</p>
           {/* TODO VERIFY CITIES: confirm the real service area before launch. */}
-          <ul className="mt-3 space-y-2 font-body text-sm text-white/80">
+          <ul className="mt-3 space-y-2 font-body text-sm text-white/85">
             <li>Miami</li>
             <li>Fort Lauderdale</li>
             <li>Boca Raton</li>

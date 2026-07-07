@@ -33,7 +33,7 @@ export default function Nav() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         {/* Wordmark */}
         <Link href="#top" className="leading-tight" onClick={() => setOpen(false)}>
-          <span className="block font-heading text-xl font-extrabold text-deepwater">
+          <span className="block font-heading text-lg font-extrabold text-deepwater sm:text-xl">
             Paradise Pools
           </span>
           <span className="block font-body text-xs text-pool">
@@ -42,7 +42,7 @@ export default function Nav() {
         </Link>
 
         {/* Desktop links plus CTA */}
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden items-center gap-5 md:flex lg:gap-6">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
@@ -54,17 +54,17 @@ export default function Nav() {
           ))}
           <a
             href="#quote"
-            className="rounded-full bg-sunburst px-5 py-2 font-heading text-sm font-bold text-white transition-opacity hover:opacity-90"
+            className="whitespace-nowrap rounded-full bg-sunburst px-5 py-2 font-heading text-base font-bold text-white transition-opacity hover:opacity-90"
           >
             Get My Free Quote
           </a>
         </div>
 
         {/* Mobile: CTA stays visible, hamburger toggles the link menu */}
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-2 md:hidden">
           <a
             href="#quote"
-            className="rounded-full bg-sunburst px-4 py-2 font-heading text-sm font-bold text-white"
+            className="whitespace-nowrap rounded-full bg-sunburst px-3 py-2 font-heading text-base font-bold text-white"
           >
             Get My Free Quote
           </a>
