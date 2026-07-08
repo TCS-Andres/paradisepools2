@@ -9,11 +9,11 @@ const QUICK_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-deepwater pb-20 text-white md:pb-0">
+    <footer className="bg-midnight pb-20 text-white md:pb-0">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-3">
         {/* Column 1: company */}
         <div>
-          <p className="font-heading text-xl font-extrabold">
+          <p className="font-heading text-xl font-bold text-champagne">
             Paradise Pools &amp; Pressure Cleaning
           </p>
           <p className="mt-3 font-body text-sm text-white/85">
@@ -26,11 +26,14 @@ export default function Footer() {
 
         {/* Column 2: quick links */}
         <div>
-          <p className="font-heading font-bold">Quick Links</p>
+          <p className="font-heading font-bold text-champagne">Quick Links</p>
           <ul className="mt-3 space-y-2 font-body text-sm text-white/85">
             {QUICK_LINKS.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="transition-colors hover:text-aqua">
+                <a
+                  href={link.href}
+                  className="text-champagne transition-colors hover:text-white"
+                >
                   {link.label}
                 </a>
               </li>
@@ -40,7 +43,7 @@ export default function Footer() {
 
         {/* Column 3: service area */}
         <div>
-          <p className="font-heading font-bold">Service Area</p>
+          <p className="font-heading font-bold text-champagne">Service Area</p>
           {/* TODO VERIFY CITIES: confirm the real service area before launch. */}
           <ul className="mt-3 space-y-2 font-body text-sm text-white/85">
             <li>Miami</li>

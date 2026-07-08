@@ -9,20 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Paradise Pools brand tokens.
-        pool: "#00A8E8", // primary brand blue: accents, icons, links
-        deepwater: "#003D5B", // dark blue: headings, dark sections, footer
-        aqua: "#7FDBFF", // light accent: gradients
-        sunburst: "#FF6B35", // CTA orange: buttons and CTAs ONLY
-        sand: "#FDFCF9", // page background
-        wavetint: "#EAF7FD", // alternate section background
-        charcoal: "#1F2A33", // body text
+        // Paradise Pools brand tokens: premium resort palette.
+        navy: "#0B1D33", // primary dark: hero overlay, dark sections, headings on light, text on gold
+        midnight: "#071423", // deepest sections and footer, gradient depth partner to navy
+        gold: "#C9A227", // the ONLY CTA color: button fills, checkmarks, key highlights
+        champagne: "#E8D9A0", // soft accent: eyebrows, icons, rule lines, links ON DARK
+        ivory: "#F7F4EC", // light page background
+        pearl: "#EDEAE0", // alternate light section background
+        ink: "#1A2230", // body text on light backgrounds
       },
       fontFamily: {
-        // Montserrat for headings, Inter for body. Inter is also the default sans.
-        heading: ["var(--font-montserrat)", "sans-serif"],
+        // Playfair Display for headings, Inter for body. Inter is also the default sans.
+        heading: ["var(--font-playfair)", "serif"],
         body: ["var(--font-inter)", "sans-serif"],
         sans: ["var(--font-inter)", "sans-serif"],
+      },
+      boxShadow: {
+        // Soft, deep luxury card shadow: larger blur, lower opacity than a default card.
+        luxe: "0 24px 60px -16px rgba(11, 29, 51, 0.18)",
       },
     },
   },

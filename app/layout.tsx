@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
-// Montserrat for headings (700 bold, 800 extrabold).
-const montserrat = Montserrat({
+// Playfair Display for headings (600 semibold, 700 bold).
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["700", "800"],
-  variable: "--font-montserrat",
+  weight: ["600", "700"],
+  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -96,8 +96,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
-      <body className="bg-sand text-charcoal font-body antialiased">
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+      <body className="bg-ivory text-ink font-body antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

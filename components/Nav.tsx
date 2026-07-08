@@ -26,17 +26,17 @@ export default function Nav() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-sand transition-shadow duration-200 ${
+      className={`sticky top-0 z-50 bg-ivory transition-shadow duration-200 ${
         scrolled ? "shadow-md" : ""
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         {/* Wordmark */}
         <Link href="#top" className="leading-tight" onClick={() => setOpen(false)}>
-          <span className="block font-heading text-lg font-extrabold text-deepwater sm:text-xl">
+          <span className="block font-heading text-lg font-bold text-navy sm:text-xl">
             Paradise Pools
           </span>
-          <span className="block font-body text-xs text-pool">
+          <span className="block font-body text-xs text-navy">
             &amp; Pressure Cleaning
           </span>
         </Link>
@@ -47,14 +47,14 @@ export default function Nav() {
             <a
               key={link.href}
               href={link.href}
-              className="font-body text-sm text-charcoal transition-colors hover:text-pool"
+              className="font-body text-sm text-ink transition-colors hover:text-navy"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#quote"
-            className="whitespace-nowrap rounded-full bg-sunburst px-5 py-2 font-heading text-base font-bold text-white transition-opacity hover:opacity-90"
+            className="whitespace-nowrap rounded-full bg-gold px-5 py-2 font-body text-base font-semibold uppercase tracking-wider text-navy transition duration-300 hover:brightness-110"
           >
             Get My Free Quote
           </a>
@@ -64,7 +64,7 @@ export default function Nav() {
         <div className="flex items-center gap-2 md:hidden">
           <a
             href="#quote"
-            className="whitespace-nowrap rounded-full bg-sunburst px-3 py-2 font-heading text-base font-bold text-white"
+            className="whitespace-nowrap rounded-full bg-gold px-3 py-2 font-body text-base font-semibold uppercase tracking-wide text-navy transition duration-300 hover:brightness-110"
           >
             Get My Free Quote
           </a>
@@ -73,7 +73,7 @@ export default function Nav() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((value) => !value)}
-            className="text-deepwater"
+            className="text-navy"
           >
             {open ? <X size={26} /> : <Menu size={26} />}
           </button>
@@ -82,14 +82,14 @@ export default function Nav() {
 
       {/* Mobile menu drawer */}
       {open && (
-        <div className="border-t border-wavetint bg-sand md:hidden">
+        <div className="border-t border-pearl bg-ivory md:hidden">
           <div className="mx-auto flex max-w-6xl flex-col px-4 py-2">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="py-3 font-body text-charcoal transition-colors hover:text-pool"
+                className="py-3 font-body text-ink transition-colors hover:text-navy"
               >
                 {link.label}
               </a>

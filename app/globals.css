@@ -8,7 +8,9 @@
   }
 
   body {
-    @apply bg-sand text-charcoal font-body antialiased;
+    @apply bg-ivory text-ink font-body antialiased;
+    /* Airier base line height for a premium, relaxed read. */
+    line-height: 1.7;
   }
 
   /* Keep the sticky nav from covering headings when jumping to an anchor. */

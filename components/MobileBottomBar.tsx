@@ -7,14 +7,14 @@ export default function MobileBottomBar() {
       {/* PLACEHOLDER PHONE: replace +15550000000 with the verified business line. */}
       <a
         href="tel:+15550000000"
-        className="flex items-center justify-center gap-2 bg-deepwater py-4 font-heading font-bold text-white"
+        className="flex items-center justify-center gap-2 border-r border-champagne/40 bg-midnight py-4 font-body font-semibold uppercase tracking-wide text-white"
       >
         <Phone size={18} aria-hidden="true" />
         Call Now
       </a>
       <a
         href="#quote"
-        className="flex items-center justify-center bg-sunburst py-4 font-heading font-bold text-white"
+        className="flex items-center justify-center bg-gold py-4 font-body font-semibold uppercase tracking-wide text-navy"
       >
         Free Quote
       </a>
