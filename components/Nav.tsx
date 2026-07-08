@@ -33,7 +33,7 @@ export default function Nav() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         {/* Wordmark */}
         <Link href="#top" className="leading-tight" onClick={() => setOpen(false)}>
-          <span className="block font-heading text-lg font-bold text-navy sm:text-xl">
+          <span className="block whitespace-nowrap font-heading text-base font-bold text-navy sm:text-xl">
             Paradise Pools
           </span>
           <span className="block font-body text-xs text-navy">
@@ -61,10 +61,10 @@ export default function Nav() {
         </div>
 
         {/* Mobile: CTA stays visible, hamburger toggles the link menu */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-1.5 md:hidden">
           <a
             href="#quote"
-            className="whitespace-nowrap rounded-full bg-gold px-3 py-2 font-body text-base font-semibold uppercase tracking-wide text-navy transition duration-300 hover:brightness-110"
+            className="whitespace-nowrap rounded-full bg-gold px-2.5 py-2 font-body text-base font-semibold uppercase tracking-wide text-navy transition duration-300 hover:brightness-110"
           >
             Get My Free Quote
           </a>
