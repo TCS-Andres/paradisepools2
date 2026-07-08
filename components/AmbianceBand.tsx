@@ -10,16 +10,16 @@ type Ambiance = {
 
 const images: Ambiance[] = [
   {
-    src: "https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=1200&q=80",
-    alt: "A modern home with a swimming pool at dusk",
+    src: "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?auto=format&fit=crop&w=1200&q=80",
+    alt: "A villa and its pool glowing under warm lights in the evening",
   },
   {
-    src: "https://images.unsplash.com/photo-1544986581-efac024faf62?auto=format&fit=crop&w=1200&q=80",
-    alt: "A poolside terrace in warm evening light",
+    src: "https://images.unsplash.com/photo-1631752674874-9994662712af?auto=format&fit=crop&w=1200&q=80",
+    alt: "Poolside lounge chairs on a deck in warm evening light",
   },
   {
-    src: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80",
-    alt: "A resort-style home exterior lit at dusk",
+    src: "https://images.unsplash.com/photo-1657383543368-7d929944be6a?auto=format&fit=crop&w=1200&q=80",
+    alt: "A backyard pool and lit outdoor fireplace glowing at dusk",
   },
 ];
 

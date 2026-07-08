@@ -30,8 +30,8 @@ export default function Problem() {
               sizes="(min-width: 768px) 50vw, 100vw"
             />
             <ZoomImage
-              src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80"
-              alt="Sunlight on the calm water of a swimming pool"
+              src="https://images.unsplash.com/photo-1583679270049-8dce6767739f?auto=format&fit=crop&w=1200&q=80"
+              alt="Sunlight rippling across the calm water of a swimming pool"
               className="absolute bottom-0 right-0 aspect-square w-2/5 shadow-luxe ring-4 ring-champagne"
               sizes="(min-width: 768px) 20vw, 40vw"
             />

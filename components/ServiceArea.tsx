@@ -39,8 +39,8 @@ export default function ServiceArea() {
           <FadeUp delay={120}>
             {/* DECORATIVE STOCK IMAGERY, REPLACE WITH REAL JOB PHOTOS WHEN AVAILABLE. */}
             <ZoomImage
-              src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1600&q=80"
-              alt="A quiet coastal neighborhood at dusk"
+              src="https://images.unsplash.com/photo-1627759337152-1cf00b1bb33e?auto=format&fit=crop&w=1600&q=80"
+              alt="Homes along a quiet coastal street at sunset"
               className="aspect-[4/3] w-full shadow-luxe"
               sizes="(min-width: 768px) 50vw, 100vw"
             />

@@ -26,16 +26,16 @@ const services: Service[] = [
     title: "Pressure Washing",
     body: "Driveways, patios, pool decks, and walkways restored to like-new. One visit and the whole property looks sharper.",
     image:
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "A modern home exterior at dusk",
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "A home exterior at dusk with a driveway and a lit entryway",
   },
   {
     icon: Trash2,
     title: "Trash Bin Cleaning",
     body: "We sanitize and deodorize your bins right at the curb. The chore nobody wants, gone for good.",
     image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "A residential home exterior",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "A modern home exterior glowing at dusk",
   },
 ];
 

@@ -16,14 +16,14 @@ export default function WhyUs() {
           {/* PLACEHOLDER REPLACE WITH REAL TEAM PHOTO */}
           <div className="relative">
             <ZoomImage
-              src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80"
-              alt="A resort-style swimming pool glowing at dusk"
+              src="https://images.unsplash.com/photo-1598924957326-0446ac30341e?auto=format&fit=crop&w=1200&q=80"
+              alt="An infinity pool overlooking the ocean at sunset framed by palm trees"
               className="aspect-[4/3] w-full shadow-luxe"
               sizes="(min-width: 768px) 50vw, 100vw"
             />
             <ZoomImage
-              src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80"
-              alt="A backyard pool lit softly at dusk"
+              src="https://images.unsplash.com/photo-1657383543368-7d929944be6a?auto=format&fit=crop&w=1200&q=80"
+              alt="A backyard pool and spa beside a lit outdoor fireplace at dusk"
               className="absolute bottom-4 right-4 aspect-[3/4] w-28 shadow-luxe ring-4 ring-ivory sm:w-40"
               sizes="(min-width: 768px) 160px, 112px"
             />
