@@ -1,4 +1,3 @@
-import { Star } from "lucide-react";
 import FadeUp from "./FadeUp";
 
 const testimonials = [
@@ -37,12 +36,7 @@ export default function Testimonials() {
           {testimonials.map((item, index) => (
             <FadeUp key={index} delay={index * 120}>
               <figure className="flex h-full flex-col rounded-2xl bg-white p-8 shadow-luxe">
-                <div className="flex gap-1" aria-hidden="true">
-                  {[0, 1, 2, 3, 4].map((star) => (
-                    <Star key={star} className="h-4 w-4 fill-gold text-gold" />
-                  ))}
-                </div>
-                <blockquote className="mt-4 font-body text-lg italic leading-relaxed text-ink">
+                <blockquote className="font-body text-lg italic leading-relaxed text-ink">
                   &ldquo;{item.quote}&rdquo;
                 </blockquote>
                 <figcaption className="mt-6 font-body font-semibold text-navy">
