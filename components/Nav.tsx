@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { motion, useScroll } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
@@ -15,6 +16,11 @@ const NAV_LINKS = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  // Page scroll progress, 0 to 1, drives the gold bar under the header.
+  // framer-motion tracks this without React re-renders; under reduced motion
+  // it still updates instantly, just without any easing.
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     // Add a subtle shadow once the page has scrolled past 50px.
@@ -97,6 +103,13 @@ export default function Nav() {
           </div>
         </div>
       )}
+
+      {/* Thin gold scroll progress bar pinned to the header's bottom edge. */}
+      <motion.div
+        aria-hidden="true"
+        style={{ scaleX: scrollYProgress }}
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-0.5 origin-left bg-gold"
+      />
     </header>
   );
 }

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { Phone } from "lucide-react";
+import { Phone, ChevronDown } from "lucide-react";
 
 // H1 copy split into words so each can fade up in sequence on load.
 const HEADLINE_WORDS = [
@@ -57,7 +57,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="pp-hero-kenburns object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy/80 to-transparent" />
       </div>
@@ -147,15 +147,48 @@ export default function Hero() {
         </svg>
       </div>
 
+      {/* Scroll cue: a champagne chevron that drifts down to invite scrolling.
+          Purely decorative, so aria-hidden, and hidden entirely under reduced
+          motion. Sits above the wave, centered near the hero's lower edge. */}
+      <div
+        aria-hidden="true"
+        className="pp-scroll-cue pointer-events-none absolute bottom-24 left-1/2 z-20 -translate-x-1/2 md:bottom-28"
+      >
+        <ChevronDown className="pp-scroll-cue-icon h-7 w-7 text-champagne drop-shadow" />
+      </div>
+
       {/* Slow horizontal drift for the wave, disabled under reduced motion. */}
       <style>{`
         @keyframes ppWaveDrift {
           from { transform: translateX(-2%); }
           to { transform: translateX(2%); }
         }
+        @keyframes ppHeroKenBurns {
+          from { transform: scale(1); }
+          to { transform: scale(1.06); }
+        }
+        @keyframes ppScrollCue {
+          0% { transform: translateY(0); opacity: 0.5; }
+          50% { transform: translateY(8px); opacity: 1; }
+          100% { transform: translateY(0); opacity: 0.5; }
+        }
+        /* Hidden by default so reduced motion never shows the drifting cue. */
+        .pp-scroll-cue {
+          display: none;
+        }
         @media (prefers-reduced-motion: no-preference) {
           .pp-wave-drift {
             animation: ppWaveDrift 28s ease-in-out infinite alternate;
+          }
+          .pp-hero-kenburns {
+            transform-origin: center;
+            animation: ppHeroKenBurns 30s linear infinite alternate;
+          }
+          .pp-scroll-cue {
+            display: block;
+          }
+          .pp-scroll-cue-icon {
+            animation: ppScrollCue 2.4s ease-in-out infinite;
           }
         }
       `}</style>

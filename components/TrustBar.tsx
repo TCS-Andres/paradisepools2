@@ -21,11 +21,16 @@ export default function TrustBar() {
     <section className="bg-ivory py-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeUp>
-          <ul className="grid grid-cols-2 gap-x-6 gap-y-5 md:grid-cols-4">
+          {/* One refined strip: gold icons, with champagne hairline dividers
+              between items on desktop. Wraps to a clean 2 by 2 grid at 375px. */}
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-5 md:grid-cols-4 md:gap-x-0 md:divide-x md:divide-champagne">
             {TRUST_ITEMS.map(({ icon: Icon, label }) => (
-              <li key={label} className="flex items-center gap-3">
+              <li
+                key={label}
+                className="flex items-center gap-3 md:justify-center md:px-6"
+              >
                 <Icon
-                  className="h-6 w-6 shrink-0 text-navy"
+                  className="h-6 w-6 shrink-0 text-gold"
                   aria-hidden="true"
                 />
                 <span className="font-body font-semibold text-ink">
