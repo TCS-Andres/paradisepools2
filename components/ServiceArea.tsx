@@ -15,10 +15,10 @@ const cities = [
 
 export default function ServiceArea() {
   return (
-    <section id="service-area" className="bg-deepwater py-20 text-white">
+    <section id="service-area" className="bg-navy py-28 text-white">
       <div className="mx-auto max-w-6xl px-4">
         <FadeUp>
-          <h2 className="font-heading text-3xl font-extrabold text-white md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold text-white md:text-4xl">
             Proudly serving South Florida.
           </h2>
           {/* TODO EXACT CITY LIST AND HOME BASE */}
@@ -35,7 +35,7 @@ export default function ServiceArea() {
           <ul className="mt-10 grid grid-cols-1 gap-y-4 gap-x-8 sm:grid-cols-2">
             {cities.map((city) => (
               <li key={city} className="flex items-center gap-3">
-                <MapPin className="h-5 w-5 shrink-0 text-aqua" aria-hidden="true" />
+                <MapPin className="h-5 w-5 shrink-0 text-champagne" aria-hidden="true" />
                 <span className="font-body text-lg text-white">{city}</span>
               </li>
             ))}

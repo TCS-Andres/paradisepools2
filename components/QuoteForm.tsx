@@ -79,18 +79,22 @@ export default function QuoteForm() {
   }
 
   const inputClasses =
-    "w-full rounded-lg border border-gray-200 bg-white px-4 py-3 font-body text-charcoal placeholder:text-charcoal/40 focus:border-pool focus:outline-none focus:ring-2 focus:ring-pool/60";
+    "w-full rounded-lg border border-gray-200 bg-white px-4 py-3 font-body text-ink placeholder:text-ink/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/60";
   const labelClasses =
-    "mb-1.5 block font-body font-semibold text-deepwater";
+    "mb-1.5 block font-body font-semibold text-navy";
 
   return (
     <section
       id="quote"
-      className="bg-sunburst px-4 py-24 pb-40 md:pb-24"
+      className="bg-navy px-4 py-28 pb-40 md:pb-28"
     >
       <div className="mx-auto max-w-xl">
         <FadeUp className="text-center">
-          <h2 className="font-heading font-extrabold text-white text-[clamp(2rem,4vw,3rem)] leading-tight">
+          <span
+            aria-hidden="true"
+            className="mx-auto mb-6 block h-0.5 w-12 bg-gold"
+          />
+          <h2 className="font-heading font-bold text-white text-[clamp(2rem,4vw,3rem)] leading-tight">
             Ready for a pool that takes care of itself?
           </h2>
           <p className="mx-auto mt-4 max-w-lg font-body text-lg text-white/90">
@@ -100,7 +104,7 @@ export default function QuoteForm() {
         </FadeUp>
 
         <FadeUp delay={120} className="mt-10">
-          <div className="rounded-2xl bg-white p-8 shadow-xl sm:p-10">
+          <div className="rounded-2xl bg-white p-8 shadow-luxe sm:p-10">
             {submitted ? (
               <div
                 className="flex flex-col items-center py-8 text-center"
@@ -108,10 +112,10 @@ export default function QuoteForm() {
                 aria-live="polite"
               >
                 <CheckCircle2
-                  className="h-16 w-16 text-pool"
+                  className="h-16 w-16 text-gold"
                   aria-hidden="true"
                 />
-                <p className="mt-4 font-heading text-xl font-bold text-deepwater">
+                <p className="mt-4 font-heading text-xl font-bold text-navy">
                   Thanks! We will reach out within one business day.
                 </p>
               </div>
@@ -139,7 +143,7 @@ export default function QuoteForm() {
                       <p
                         id="quote-name-error"
                         role="alert"
-                        className="mt-1.5 font-body text-sm text-sunburst"
+                        className="mt-1.5 font-body text-sm font-semibold text-[#B91C1C]"
                       >
                         {errors.name}
                       </p>
@@ -186,7 +190,7 @@ export default function QuoteForm() {
                       <p
                         id="quote-contact-error"
                         role="alert"
-                        className="mt-1.5 font-body text-sm text-sunburst"
+                        className="mt-1.5 font-body text-sm font-semibold text-[#B91C1C]"
                       >
                         {errors.contact}
                       </p>
@@ -215,7 +219,7 @@ export default function QuoteForm() {
                   <div>
                     <label htmlFor="quote-message" className={labelClasses}>
                       Message{" "}
-                      <span className="font-normal text-charcoal/50">
+                      <span className="font-normal text-ink/50">
                         (optional)
                       </span>
                     </label>
@@ -231,7 +235,7 @@ export default function QuoteForm() {
 
                   <button
                     type="submit"
-                    className="w-full rounded-lg bg-deepwater px-6 py-4 font-heading font-bold text-white transition-colors hover:bg-deepwater/90 focus:outline-none focus:ring-2 focus:ring-deepwater/60 focus:ring-offset-2 focus:ring-offset-white"
+                    className="w-full rounded-lg bg-gold px-6 py-4 font-body text-base font-semibold uppercase tracking-wider text-navy transition duration-300 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-gold/60 focus:ring-offset-2 focus:ring-offset-white"
                   >
                     Send My Free Quote Request
                   </button>

@@ -18,17 +18,17 @@ const TRUST_ITEMS: TrustItem[] = [
 
 export default function TrustBar() {
   return (
-    <section className="bg-wavetint py-6">
+    <section className="bg-ivory py-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeUp>
           <ul className="grid grid-cols-2 gap-x-6 gap-y-5 md:grid-cols-4">
             {TRUST_ITEMS.map(({ icon: Icon, label }) => (
               <li key={label} className="flex items-center gap-3">
                 <Icon
-                  className="h-6 w-6 shrink-0 text-pool"
+                  className="h-6 w-6 shrink-0 text-navy"
                   aria-hidden="true"
                 />
-                <span className="font-body font-semibold text-charcoal">
+                <span className="font-body font-semibold text-ink">
                   {label}
                 </span>
               </li>

@@ -10,14 +10,14 @@ const proofChips = [
 
 export default function WhyUs() {
   return (
-    <section className="bg-wavetint py-24">
+    <section className="bg-pearl py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 md:grid-cols-2">
         <FadeUp>
           {/* PLACEHOLDER REPLACE WITH REAL TEAM PHOTO */}
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-md">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-luxe">
             <Image
-              src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80"
-              alt="Clean, well-kept backyard swimming pool"
+              src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80"
+              alt="A resort-style swimming pool glowing at dusk"
               fill
               loading="lazy"
               sizes="(min-width: 768px) 50vw, 100vw"
@@ -28,17 +28,17 @@ export default function WhyUs() {
 
         <FadeUp delay={120}>
           <div>
-            <h2 className="font-heading text-3xl font-extrabold text-deepwater md:text-4xl">
+            <h2 className="font-heading text-3xl font-bold text-navy md:text-4xl">
               A local family business that treats your home like ours.
             </h2>
-            <p className="mt-6 font-body text-lg leading-relaxed text-charcoal">
+            <p className="mt-6 font-body text-lg leading-relaxed text-ink">
               Paradise Pools &amp; Pressure Cleaning is run by a South Florida
               family that believes showing up on time and doing the job right is
               the whole business. No call centers, no rotating strangers in your
               backyard. The same friendly faces, week after week.
             </p>
             {/* TODO VERIFY YEARS */}
-            <p className="mt-4 font-body text-lg leading-relaxed text-charcoal">
+            <p className="mt-4 font-body text-lg leading-relaxed text-ink">
               Proudly serving our neighbors year after year.
             </p>
 
@@ -48,8 +48,8 @@ export default function WhyUs() {
                   key={label}
                   className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm"
                 >
-                  <Icon className="h-5 w-5 text-pool" aria-hidden="true" />
-                  <span className="font-body text-sm font-semibold text-charcoal">
+                  <Icon className="h-5 w-5 text-gold" aria-hidden="true" />
+                  <span className="font-body text-sm font-semibold text-ink">
                     {label}
                   </span>
                 </li>

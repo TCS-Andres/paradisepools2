@@ -20,13 +20,14 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="bg-sand py-24">
+    <section id="how-it-works" className="bg-ivory py-28">
       <div className="mx-auto max-w-6xl px-4">
         <FadeUp>
-          <p className="font-body text-sm font-semibold uppercase tracking-widest text-pool">
+          <p className="flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-widest text-navy">
+            <span className="h-px w-10 bg-champagne" aria-hidden="true" />
             Getting Started
           </p>
-          <h2 className="mt-3 max-w-2xl font-heading text-3xl font-extrabold text-deepwater md:text-4xl">
+          <h2 className="mt-3 max-w-2xl font-heading text-3xl font-bold text-navy md:text-4xl">
             Three steps to a spotless backyard.
           </h2>
         </FadeUp>
@@ -35,13 +36,21 @@ export default function HowItWorks() {
           {steps.map((step, index) => (
             <FadeUp key={step.number} delay={index * 120}>
               <div>
-                <span className="block font-heading text-6xl font-extrabold text-pool">
-                  {step.number}
-                </span>
-                <h3 className="mt-4 font-heading text-2xl font-bold text-deepwater">
+                <div className="flex items-center gap-4">
+                  <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-navy font-heading text-3xl font-bold text-ivory">
+                    {step.number}
+                  </span>
+                  {index < steps.length - 1 && (
+                    <span
+                      className="hidden h-px flex-1 bg-champagne md:block"
+                      aria-hidden="true"
+                    />
+                  )}
+                </div>
+                <h3 className="mt-6 font-heading text-2xl font-bold text-navy">
                   {step.title}
                 </h3>
-                <p className="mt-2 font-body text-lg leading-relaxed text-charcoal">
+                <p className="mt-2 font-body text-lg leading-relaxed text-ink">
                   {step.body}
                 </p>
               </div>

@@ -1,3 +1,4 @@
+import { Star } from "lucide-react";
 import FadeUp from "./FadeUp";
 
 const testimonials = [
@@ -19,13 +20,14 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="reviews" className="bg-sand py-24">
+    <section id="reviews" className="bg-ivory py-28">
       <div className="mx-auto max-w-6xl px-4">
         <FadeUp>
-          <p className="font-body text-sm font-semibold uppercase tracking-widest text-pool">
+          <p className="flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-widest text-navy">
+            <span className="h-px w-10 bg-champagne" aria-hidden="true" />
             Happy Neighbors
           </p>
-          <h2 className="mt-3 font-heading text-3xl font-extrabold text-deepwater md:text-4xl">
+          <h2 className="mt-3 font-heading text-3xl font-bold text-navy md:text-4xl">
             What homeowners say.
           </h2>
         </FadeUp>
@@ -34,11 +36,16 @@ export default function Testimonials() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {testimonials.map((item, index) => (
             <FadeUp key={index} delay={index * 120}>
-              <figure className="flex h-full flex-col rounded-2xl bg-white p-8 shadow-md">
-                <blockquote className="font-body text-lg italic leading-relaxed text-charcoal">
+              <figure className="flex h-full flex-col rounded-2xl bg-white p-8 shadow-luxe">
+                <div className="flex gap-1" aria-hidden="true">
+                  {[0, 1, 2, 3, 4].map((star) => (
+                    <Star key={star} className="h-4 w-4 fill-gold text-gold" />
+                  ))}
+                </div>
+                <blockquote className="mt-4 font-body text-lg italic leading-relaxed text-ink">
                   &ldquo;{item.quote}&rdquo;
                 </blockquote>
-                <figcaption className="mt-6 font-body font-semibold text-deepwater">
+                <figcaption className="mt-6 font-body font-semibold text-navy">
                   {item.name}
                 </figcaption>
               </figure>

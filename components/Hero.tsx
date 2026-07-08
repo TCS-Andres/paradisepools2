@@ -16,8 +16,8 @@ const HEADLINE_WORDS = [
   "again.",
 ];
 
-// 80ms stagger per word.
-const WORD_STAGGER = 0.08;
+// 120ms stagger per word.
+const WORD_STAGGER = 0.12;
 
 const headlineContainer: Variants = {
   hidden: {},
@@ -52,30 +52,31 @@ export default function Hero() {
       {/* Background photo with a left-to-right dark overlay for text contrast. */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=2070&auto=format&fit=crop"
-          alt="Sparkling residential backyard swimming pool with clear blue water on a bright sunny day"
+          src="https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?q=80&w=2070&auto=format&fit=crop"
+          alt="Luxury resort infinity pool lined with palm trees, reflecting warm lights at dusk"
           fill
           priority
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-deepwater/85 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/80 to-transparent" />
       </div>
 
       {/* Hero content: vertically centered, left aligned. */}
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-24 pt-28 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-28 pt-28 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <motion.p
-            className="font-heading font-bold uppercase tracking-[0.22em] text-pool"
+            className="flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-[0.22em] text-champagne"
             initial={reduceMotion ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
+            <span aria-hidden="true" className="h-px w-10 bg-champagne" />
             South Florida Pool &amp; Exterior Cleaning
           </motion.p>
 
           <motion.h1
-            className="mt-4 font-heading font-extrabold leading-[1.05] text-white"
+            className="mt-4 font-heading font-bold leading-[1.05] text-white"
             style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}
             variants={headlineContainer}
             initial={reduceMotion ? false : "hidden"}
@@ -110,7 +111,7 @@ export default function Hero() {
           >
             <a
               href="#quote"
-              className="inline-flex items-center justify-center rounded-full bg-sunburst px-8 py-4 font-heading text-lg font-bold text-white transition-transform motion-safe:hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-deepwater"
+              className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 font-body text-lg font-semibold uppercase tracking-wider text-navy transition duration-300 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
             >
               Get My Free Quote
             </a>
@@ -118,7 +119,7 @@ export default function Hero() {
             {/* PLACEHOLDER PHONE */}
             <a
               href="tel:+15550000000"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white px-8 py-4 font-heading text-lg font-bold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-deepwater"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-champagne px-8 py-4 font-body text-lg font-semibold uppercase tracking-wider text-champagne transition duration-300 hover:bg-champagne/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-champagne focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
               Call (555) 000-0000
@@ -127,7 +128,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Sand wave divider that eases into the next section, with a slow drift. */}
+      {/* Ivory wave divider that eases into the next section, with a slow drift. */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 bottom-0 overflow-hidden leading-[0]"
@@ -138,9 +139,9 @@ export default function Hero() {
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* fill is sand #FDFCF9 to blend into the page background. */}
+          {/* fill is ivory #F7F4EC to blend into the light page background. */}
           <path
-            fill="#FDFCF9"
+            fill="#F7F4EC"
             d="M0,40 C240,100 480,0 720,40 C960,80 1200,20 1440,60 L1440,120 L0,120 Z"
           />
         </svg>
@@ -154,7 +155,7 @@ export default function Hero() {
         }
         @media (prefers-reduced-motion: no-preference) {
           .pp-wave-drift {
-            animation: ppWaveDrift 16s ease-in-out infinite alternate;
+            animation: ppWaveDrift 28s ease-in-out infinite alternate;
           }
         }
       `}</style>
