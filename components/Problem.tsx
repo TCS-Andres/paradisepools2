@@ -1,5 +1,5 @@
-import Image from "next/image";
 import FadeUp from "./FadeUp";
+import ZoomImage from "./ZoomImage";
 
 export default function Problem() {
   return (
@@ -21,13 +21,19 @@ export default function Problem() {
         </FadeUp>
 
         <FadeUp delay={150}>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
-            <Image
+          {/* DECORATIVE STOCK IMAGERY, REPLACE WITH REAL JOB PHOTOS WHEN AVAILABLE. */}
+          <div className="relative pb-10 pr-6 md:pb-12 md:pr-10">
+            <ZoomImage
               src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
               alt="A resort swimming pool at dusk with cabanas and palm trees under an evening sky"
-              fill
+              className="aspect-[4/3] w-full shadow-luxe"
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover"
+            />
+            <ZoomImage
+              src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80"
+              alt="Sunlight on the calm water of a swimming pool"
+              className="absolute bottom-0 right-0 aspect-square w-2/5 shadow-luxe ring-4 ring-champagne"
+              sizes="(min-width: 768px) 20vw, 40vw"
             />
           </div>
         </FadeUp>

@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Home, CalendarCheck, Camera } from "lucide-react";
 import FadeUp from "./FadeUp";
+import ZoomImage from "./ZoomImage";
 
 const proofChips = [
   { icon: Home, label: "Local and family-run" },
@@ -14,14 +14,23 @@ export default function WhyUs() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 md:grid-cols-2">
         <FadeUp>
           {/* PLACEHOLDER REPLACE WITH REAL TEAM PHOTO */}
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-luxe">
-            <Image
+          <div className="relative">
+            <ZoomImage
               src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80"
               alt="A resort-style swimming pool glowing at dusk"
-              fill
-              loading="lazy"
+              className="aspect-[4/3] w-full shadow-luxe"
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover"
+            />
+            <ZoomImage
+              src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80"
+              alt="A backyard pool lit softly at dusk"
+              className="absolute bottom-4 right-4 aspect-[3/4] w-28 shadow-luxe ring-4 ring-ivory sm:w-40"
+              sizes="(min-width: 768px) 160px, 112px"
+            />
+            {/* Small champagne-bordered detail accent. */}
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -left-3 -top-3 h-12 w-12 rounded-xl border-2 border-champagne"
             />
           </div>
         </FadeUp>

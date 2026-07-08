@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Check } from "lucide-react";
 import FadeUp from "./FadeUp";
 
@@ -11,9 +12,20 @@ export default function Membership() {
   return (
     <section
       id="membership"
-      className="bg-gradient-to-br from-navy to-midnight py-28"
+      className="relative overflow-hidden bg-gradient-to-br from-navy to-midnight py-28"
     >
-      <div className="mx-auto max-w-3xl px-4">
+      {/* DECORATIVE STOCK IMAGERY, REPLACE WITH REAL JOB PHOTOS WHEN AVAILABLE. */}
+      {/* Low-opacity dusk pool photo tints the navy gradient so white text stays far above AA. */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <Image
+          src="https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=1600&q=80"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover opacity-[0.14]"
+        />
+      </div>
+      <div className="relative mx-auto max-w-3xl px-4">
         <FadeUp>
           <div className="rounded-2xl border-t-[6px] border-gold bg-white p-8 shadow-luxe md:p-12">
             <p className="flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-wider text-navy">

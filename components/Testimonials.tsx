@@ -35,11 +35,22 @@ export default function Testimonials() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {testimonials.map((item, index) => (
             <FadeUp key={index} delay={index * 120}>
-              <figure className="flex h-full flex-col rounded-2xl bg-white p-8 shadow-luxe">
-                <blockquote className="font-body text-lg italic leading-relaxed text-ink">
+              <figure
+                className={`relative flex h-full flex-col overflow-hidden rounded-2xl bg-white p-8 shadow-luxe ${
+                  index === 1 ? "md:-translate-y-6" : ""
+                }`}
+              >
+                {/* Decorative Playfair quotation mark behind each quote. */}
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -right-1 top-1 select-none font-heading text-8xl leading-none text-champagne"
+                >
+                  &rdquo;
+                </span>
+                <blockquote className="relative z-10 font-body text-lg italic leading-relaxed text-ink">
                   &ldquo;{item.quote}&rdquo;
                 </blockquote>
-                <figcaption className="mt-6 font-body font-semibold text-navy">
+                <figcaption className="relative z-10 mt-6 font-body font-semibold text-navy">
                   {item.name}
                 </figcaption>
               </figure>
